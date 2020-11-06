@@ -1,11 +1,12 @@
 import React from 'react';
-import Header from './Common/Header';
+import Header from "./Common/Header";
 
-function App() {
+// import "./Scss/Styles.scss";
+// import Styles from "./Scss/Stlyes.scss";
+
+const App = () => {
   return (
-    <>
-      <Header />
-    </>
+    <Header className={'header'}/>
   );
 }
 
