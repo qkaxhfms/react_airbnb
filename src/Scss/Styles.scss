@@ -11,7 +11,9 @@ html{
 h1{
     color:black;
 }
-
+.display-none{
+    display: none;
+}
 
 // header
 .header{
@@ -38,9 +40,24 @@ h1{
             width: 100%;
             height: 100%;
         }
-        &__country svg {
+        &__icon svg {
             width: 1.6rem;
             height: 1.6rem;
+        }
+        &__menu svg {
+            width: 1.6rem;
+            height: 1.6rem;
+            path {
+                stroke:#222222;
+                fill: #222222;
+            }
+        }
+        &__member svg {
+            width: 2.4rem;
+            height: 2.4rem;
+            path {
+                fill: #cccccc;
+            }
         }
     }
     svg{
@@ -59,8 +76,8 @@ h1{
                 content:"";
                 position:absolute;
                 display:inline-block;
-                width:6px;
-                height:6px;
+                width:4px;
+                height:4px;
                 border-style:solid;
                 border-width:1px;
                 border-left-color:transparent;
@@ -69,32 +86,87 @@ h1{
                 border-bottom-color:#ffffff;
             }
         }
+        &__join{
+            height:2.2rem;
+            vertical-align:middle;
+            display: flex;
+            align-items:center;
+        }
     }
 }
 
 .navigation{
-    // background-color:#000000;
+    &__right {
+        li {
+            border-radius: 2.2rem;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.15);
+            }
+        }
+    }
     &__list{
         display: flex;
-        // background-color:#cccccc;
+        align-itmes:center;
         li{
             padding:1rem;
             margin:0 0.3rem;
             font-size:1.6rem;
-            border-radius:2.2rem;
-            &:hover {
-                background-color: rgba(255, 255, 255, 0.15);
-            }
         }
         a{
             display: inline-block;
         }
 
-        &-depth{
-            display: none;
-        }
     }
-    // &__right{
+    &__item{
+        position:relative;
+        &--round{
+            background-color:#ffffff;
+            .svg__menu{
+                display:inline;
+                margin-right:15px;
+            }
+            &:hover {
+                background-color: none;
+            }
+        }
+        &--depth{
+            display: none;
+            min-width:185px;
+            position:absolute;
+            top:53px;
+            right:0;
+            background:green;
+            background-color:#ffffff;
+            box-sizing:border-box;
+            border:1px solid red;
+            border-radius:10px;
+            overflow:hidden;
+            ul:first-child {
+                border-bottom: 1px solid #dddddd;
+            }
+            li{
+                line-height:20px;
+                margin:0;
+                padding:1rem 1.5rem;
+            }
+            .svg{
+                margin-right:8px;
+            }
+            svg{
+                path{
+                    fill:#222222;
+                }
+            }
+            a{
+                color:#222222;
+            }
+            // large
+            &-large {
+                min-width: 240px;
+            }
+        }
 
-    // }
+
+    }
 }
