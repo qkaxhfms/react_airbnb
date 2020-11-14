@@ -1,5 +1,12 @@
 import React from 'react';
 
+const navigationOpen = (e) => {
+
+};
+
+const navigationDepth = document.querySelector(".navigation__item--depth");
+// navigation__item--depth
+
 function NavigationRight(){
     return (
       <>

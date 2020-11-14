@@ -98,6 +98,29 @@
 }
 
 .navigation {
+    &__global {
+        li {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                display:block;
+                transition: all 0.2s;
+                width: 0;
+                left:50%;
+                bottom:0;
+                height:2px;
+                background-color: #ffffff;
+                transform:translateX(-50%);
+            }
+            // border-radius: 2.2rem;
+
+            &:hover::after {
+                width:50%;
+            }
+        }
+    }
+
     &__right {
         li {
             border-radius: 2.2rem;
@@ -105,12 +128,16 @@
             &:hover {
                 background-color: rgba(255, 255, 255, 0.15);
             }
+
+            &:last-child:hover {
+                background-color: #ffffff;
+            }
         }
     }
 
     &__list {
         display: flex;
-        align-itmes: center;
+        align-items: center;
 
         li {
             padding: 1rem;
